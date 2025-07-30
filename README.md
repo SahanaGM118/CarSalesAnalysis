@@ -59,36 +59,98 @@ The dataset used in this analysis includes the following fields:
 The dashboard includes the following pages and visuals:
 
 - **Sales Overview**
-  - Total units sold
-  - Total revenue
-  - Average sale price
-- **Brand & Model Performance**
-  - Top 5 car brands and models
-  - Sales by vehicle type
-- **Time Analysis**
-  - Monthly and yearly sales trends
-- **Geographical Distribution**
-  - Map showing regional sales breakdown
-- **Interactive Slicers**
-  - Filter by date, region, brand, model, vehicle type
+  - Total Sales
+  - Total cars sold
+  - Average Car price
+  - Average Customer Income
+  - Total Sales by model
+  - Total cars sold by month
+  - Total sales by Company(Car)
+    
+
+ **Customer Insights**
+  - Top Customer
+  - Total sales by gender
+  - Average of Annual Income by Income Range
+ 
+- **Dealer and Regional Performance**
+  - Top Dealer
+  - Map Showing regional dealer sales breakdown
+  - AveragevCar Price by dealer region
+  - Total sales by dealer name
+  
+- **Car & Feature analysis**
+  - Top 1 Car selling company
+  - Total sales by company(Car)
+  - Total cars sold by model
+  - Total cars sold by Color
+  - Total cars sold by Body Style
+  - Count of company(Car)by transmission
+
+
 
 ---
 
-## 🚀 How to Use
 
-1. Clone or download this repository.
-2. Open the `.pbix` file in [Power BI Desktop](https://powerbi.microsoft.com/desktop).
-3. Interact with the dashboard using filters and visuals.
-4. Customize it using your own dataset (optional).
+**DAX**
 
----
+## Sales Overview: ##
+ 
+
+- **Total CarsSold:** 24K
+    - **Formula:** `Total Car Sold = COUNT('car_data'[Car_id])`
+
+- **Average CarPrice:** 28.09K
+    - **Formula:** `Average Car Price = AVERAGE('car_data'[Price ($)])`
+
+- **Average CustomerIncome:** 830.84K
+    - **Formula:** `Average customer Income = AVERAGE(car_data[Annual Income])`
+
+
+## Customer Insights: ##
+
+  - **Top Customer:** Emma
+    - **Formula:** `Top Customer = CALCULATE(
+                        SELECTEDVALUE(car_data[Customer Name]),
+                        TOPN(1,VALUES('car_data'[Customer Name]),[Total Sales]
+                        )
+                        )`
+
+
+## Dealer & Regional Performance: ##
+
+- **Top Dealer:** Rabun Used Car Sales
+    - **Formula:** `Top Dealer = CALCULATE(
+    SELECTEDVALUE('car_data'[Dealer_Name]),
+    TOPN(1, 
+        VALUES(car_data[Dealer_Name]), 
+       [Total Sales]  
+    )
+)`
+
+## Car&FeatureAnalysis: ##
+
+- **Top Company(Car):** Chevrolet
+    - **Formula:** `Top 1 Selling Company = CALCULATE(
+    SELECTEDVALUE('car_data'[Company]),
+    TOPN(
+        1,
+        VALUES(car_data[Company]),
+        [Total Sales]
+        
+    )
+  
+)`
+
+
 
 ## 📷 Screenshots
 
-> *(Add your screenshots in a folder named `images` and reference them like below)*
 
-![Sales Overview](images/sales-overview.png)
-![Brand-wise Sales](images/brand-sales.png)
+
+
+
+
 
 ---
 
@@ -99,12 +161,3 @@ The dashboard includes the following pages and visuals:
 - **Email:** Sahanagm682@gmail.com
 
 ---
-
-## 📝 License
-
-This project is licensed under the MIT License. Feel free to use and modify it for personal or educational purposes.
-
-## Objective
-Design and develop a dynamic, interactive Car Sales Dashboard to visualize critical KPIs, enabling data-driven decision-making and understanding sales performance trends over time.
-
-    
