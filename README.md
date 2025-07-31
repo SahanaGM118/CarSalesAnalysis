@@ -148,6 +148,7 @@ The dashboard includes the following pages and visuals:
 
 
 
+<img width="1312" height="736" alt="image" src="https://github.com/user-attachments/assets/aec886e7-95f2-4d03-8dbe-3d7218d5736f" />
 
 
 
