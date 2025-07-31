@@ -133,13 +133,11 @@ The dashboard includes the following pages and visuals:
 - **Top Company(Car):** Chevrolet
     - **Formula:** `Top 1 Selling Company = CALCULATE(
     SELECTEDVALUE('car_data'[Company]),
-    TOPN(
+TOPN(
         1,
         VALUES(car_data[Company]),
         [Total Sales]
-        
     )
-  
 )`
 
 
