@@ -146,11 +146,21 @@ The dashboard includes the following pages and visuals:
 
 ## 📷 Screenshots
 
-
+### 1.Sales OverView
 
 <img width="1312" height="736" alt="image" src="https://github.com/user-attachments/assets/aec886e7-95f2-4d03-8dbe-3d7218d5736f" />
 
+### 2.Customer Insights
 
+<img width="1313" height="740" alt="image" src="https://github.com/user-attachments/assets/b0aaacd1-f578-458c-9f37-687dc2d3e32c" />
+
+### 3.Dealer & Regional Performance
+
+<img width="1315" height="737" alt="image" src="https://github.com/user-attachments/assets/8aad72b3-c132-4cd8-9814-10f34264e9f1" />
+
+### 4.Car & Feature Analysis
+
+<img width="1308" height="732" alt="image" src="https://github.com/user-attachments/assets/12ae50fc-25ad-44d5-91b6-22e39408da25" />
 
 
 ---
