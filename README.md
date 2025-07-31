@@ -98,7 +98,7 @@ The dashboard includes the following pages and visuals:
  
 
 - **Total CarsSold:** 24K
-    - **Formula:** `Total Car Sold = COUNT('car_data'[Car_id])`
+    - **Formula:** ```Dax Total Car Sold = COUNT('car_data'[Car_id])`
 
 - **Average CarPrice:** 28.09K
     - **Formula:** `Average Car Price = AVERAGE('car_data'[Price ($)])`
